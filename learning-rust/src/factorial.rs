@@ -12,3 +12,21 @@ pub fn factorial_loop(n: u64) -> u64 {
     }
     sum
 }
+
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_factorial_rec() {
+        let result = factorial_rec(5);
+        assert_eq!(result, 2 * 3 * 4 * 5);
+    }
+
+    #[test]
+    fn test_factorial_loop() {
+        let result = factorial_loop(5);
+        assert_eq!(result, 2 * 3 * 4 * 5);
+    }
+}
