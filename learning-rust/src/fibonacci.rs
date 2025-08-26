@@ -1,4 +1,5 @@
 // TODO add memoization
+/// Recursively computes the fibonacci sequence value at index `n`
 pub fn fibonacci_rec(n: u64) -> u64 {
     if n == 0 || n == 1 {
         return n;
