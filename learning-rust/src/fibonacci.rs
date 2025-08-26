@@ -1,21 +1,18 @@
 // TODO add memoization
 pub fn fibonacci_rec(n: u64) -> u64 {
     if n == 0 || n == 1 {
-        return n
+        return n;
     }
-    fibonacci_rec(n-1) + fibonacci_rec(n-2)
+    fibonacci_rec(n - 1) + fibonacci_rec(n - 2)
 }
-
 
 pub fn fibonacci_loop(n: u64) -> u64 {
     let (mut i, mut j) = (0, 1);
-    for _ in 1..n+1 {
-        (i, j) = (j, i+j);
+    for _ in 1..n + 1 {
+        (i, j) = (j, i + j);
     }
     i
 }
-
-
 
 #[cfg(test)]
 mod tests {
@@ -30,8 +27,9 @@ mod tests {
         assert_eq!(fibonacci_rec(1), 1);
         assert_eq!(fibonacci_rec(5), 5);
         assert_eq!(fibonacci_rec(7), 13);
-    }    #[test]
+    }
 
+    #[test]
     fn test_fibonacci_loop() {
         assert_eq!(fibonacci_loop(0), 0);
         assert_eq!(fibonacci_loop(1), 1);
