@@ -1,3 +1,4 @@
+/// Recursively computes the factorial of `n`
 pub fn factorial_rec(n: u64) -> u64 {
     if n == 0 {
         return 1;
